@@ -4,6 +4,7 @@ import { Youtube, Play, ThumbsUp, Eye, Clock, Search, Filter } from 'lucide-reac
 const YouTubeChannel = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const videos = [
     {
@@ -162,6 +163,39 @@ const YouTubeChannel = () => {
               Subscribe
             </button>
           </div>
+        </div>
+
+        <div className="mb-8 bg-gray-800 rounded-lg overflow-hidden">
+          {isPlaying ? (
+            <video
+              src="/images/tssplayvideo.mp4"
+              className="w-full max-h-[70vh] bg-black"
+              controls
+              autoPlay
+            />
+          ) : (
+            <div
+              className="relative cursor-pointer group"
+              onClick={() => setIsPlaying(true)}
+            >
+              <video
+                src="/images/tssplayvideo.mp4"
+                className="w-full max-h-[70vh] object-cover bg-black"
+                preload="metadata"
+                muted
+                playsInline
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center group-hover:bg-opacity-30 transition-all">
+                <div className="bg-red-600 rounded-full p-6 group-hover:scale-110 transition-transform">
+                  <Play className="w-12 h-12 text-white" />
+                </div>
+              </div>
+              <div className="absolute bottom-4 left-4 text-left">
+                <h3 className="text-2xl font-bold text-white">TSSA Play Video</h3>
+                <p className="text-gray-300 text-sm">Click to watch</p>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="mb-8">

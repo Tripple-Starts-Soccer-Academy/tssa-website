@@ -5,16 +5,16 @@ const TrophiesWon = () => {
   const trophies = [
     {
       id: 1,
-      name: 'National Championship',
+      name: 'Ganda League',
       year: '2023',
       category: 'League',
-      description: 'Premier Division Winners',
+      description: ' Division Winners',
       icon: Trophy,
       color: 'bg-yellow-500',
     },
     {
       id: 2,
-      name: 'National Cup',
+      name: 'NCOA Leaguue',
       year: '2023',
       category: 'Cup',
       description: 'Knockout Tournament Champions',
@@ -23,7 +23,7 @@ const TrophiesWon = () => {
     },
     {
       id: 3,
-      name: 'Regional Championship',
+      name: 'Kasule Tournament',
       year: '2022',
       category: 'League',
       description: 'Division One Winners',
@@ -41,7 +41,7 @@ const TrophiesWon = () => {
     },
     {
       id: 5,
-      name: 'League Cup',
+      name: 'Nansana League',
       year: '2021',
       category: 'Cup',
       description: 'League Tournament Winners',

@@ -28,31 +28,31 @@ const Hero = () => {
             </div>
             <div className="grid grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">24</div>
+                <div className="text-3xl font-bold text-yellow-400">24</div> 
                 <div className="text-sm text-blue-100">Trophies Won</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">45K</div>
+                <div className="text-3xl font-bold text-yellow-400">15k</div>
                 <div className="text-sm text-blue-100">Stadium Capacity</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">1975</div>
+                <div className="text-3xl font-bold text-yellow-400">2017</div>
                 <div className="text-sm text-blue-100">Year Founded</div>
               </div>
             </div>
           </div>
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800&h=600&fit=crop"
-              alt="TSSA Team Celebration"
-              className="rounded-lg shadow-2xl"
+              src="/images/entryphotofortssa.jpg"
+              alt="TSSA Young Players"
+              className="rounded-md shadow-md w-md aspect-[3/4] object-cover h-80 w-95"
             />
-            <div className="absolute -bottom-6 -left-6 bg-yellow-400 text-blue-900 rounded-lg p-4 shadow-lg">
+            <div className="absolute -bottom-6 -right-6 bg-yellow-400 text-blue-900 rounded-lg p-4 shadow-lg">
               <div className="flex items-center">
                 <Trophy className="w-8 h-8 mr-3" />
                 <div>
                   <div className="font-bold">2023 Champions</div>
-                  <div className="text-sm">National League Winners</div>
+                  <div className="text-sm">2023 Esap tournament winners</div>
                 </div>
               </div>
             </div>
