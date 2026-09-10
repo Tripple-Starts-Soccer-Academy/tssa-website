@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Lock, X, UserPlus, Settings, FileText, DollarSign, Phone, Upload, Download, Trash2, Ticket } from 'lucide-react';
 
 const CORRECT_PIN = '02141';
-const API_URL = 'http://localhost:5001';
+const API_URL = window.location.hostname === 'localhost' ? 'http://localhost:5001' : '';
 
 type TabKey = 'registration' | 'admin' | 'documents' | 'expenditure' | 'tickets' | 'emergency';
 
