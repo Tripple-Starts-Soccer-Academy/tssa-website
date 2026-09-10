@@ -124,8 +124,16 @@ const TrophiesWon = () => {
               </div>
               <div className="flex-1">
                 <div className="bg-yellow-100 rounded-lg p-3 border-l-4 border-yellow-500">
-                  <div className="font-semibold text-gray-900">National Championship & National Cup</div>
-                  <div className="text-sm text-gray-600">Double winning season</div>
+                  <div className="font-semibold text-gray-900 mb-1">Tournaments & Leagues</div>
+                  <ul className="text-sm text-gray-600 list-disc list-inside space-y-0.5">
+                    <li>NCOA League</li>
+                    <li>Watoto Wasoka Tournament</li>
+                    <li>Wakiso Academy Association League</li>
+                    <li>Nansana League</li>
+                    <li>Rangers Tournament</li>
+                    <li>Ganda League</li>
+                    <li>Kasule Tournament</li>
+                  </ul>
                 </div>
               </div>
             </div>

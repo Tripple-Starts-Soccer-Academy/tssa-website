@@ -29,6 +29,9 @@ const storage = multer.diskStorage({
       case 'player':
         subDir = 'players';
         break;
+      case 'documents':
+        subDir = 'documents';
+        break;
       case 'stadium':
         subDir = 'stadium';
         break;
@@ -196,7 +199,7 @@ router.delete('/:filename', (req, res) => {
   const { filename } = req.params;
   
   // Search for file in all upload directories
-  const searchDirs = ['gallery', 'news', 'store', 'players', 'stadium', 'general'];
+  const searchDirs = ['gallery', 'news', 'store', 'players', 'stadium', 'documents', 'general'];
   let filePath = null;
   
   for (const dir of searchDirs) {
@@ -277,7 +280,7 @@ router.get('/stats', (req, res) => {
     byType: {}
   };
   
-  const searchDirs = ['gallery', 'news', 'store', 'players', 'stadium', 'general'];
+  const searchDirs = ['gallery', 'news', 'store', 'players', 'stadium', 'documents', 'general'];
   
   for (const dir of searchDirs) {
     const dirPath = path.join(uploadsDir, dir);
@@ -320,7 +323,7 @@ router.post('/optimize/:filename', (req, res) => {
   }
   
   // Search for file in all upload directories
-  const searchDirs = ['gallery', 'news', 'store', 'players', 'stadium', 'general'];
+  const searchDirs = ['gallery', 'news', 'store', 'players', 'stadium', 'documents', 'general'];
   let filePath = null;
   let foundDir = null;
   

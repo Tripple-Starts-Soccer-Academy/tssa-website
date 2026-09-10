@@ -10,11 +10,9 @@ const MatchesPlayed = () => {
   ];
 
   const recentMatches = [
-    { opponent: 'Rival FC', date: '2024-01-15', result: 'W', score: '3-1', competition: 'League' },
-    { opponent: 'United SC', date: '2024-01-08', result: 'D', score: '2-2', competition: 'Cup' },
-    { opponent: 'City Warriors', date: '2024-01-01', result: 'W', score: '2-0', competition: 'League' },
-    { opponent: 'Athletic Club', date: '2023-12-28', result: 'W', score: '4-2', competition: 'League' },
-    { opponent: 'FC Phoenix', date: '2023-12-20', result: 'L', score: '1-2', competition: 'Cup' },
+    { opponent: 'Kazinga Giants FC', date: '2026-09-09', result: 'W', score: '2-1', competition: 'League' },
+    { opponent: 'NACOA GALA (U-16)', date: '2026-09-10', result: 'upcoming', score: '-', competition: 'League' },
+    { opponent: 'URA (U-17)', date: '2026-09-11', result: 'upcoming', score: '-', competition: 'League' },
   ];
 
   const getResultColor = (result: string) => {
@@ -22,6 +20,7 @@ const MatchesPlayed = () => {
       case 'W': return 'bg-green-100 text-green-800 border-green-300';
       case 'D': return 'bg-yellow-100 text-yellow-800 border-yellow-300';
       case 'L': return 'bg-red-100 text-red-800 border-red-300';
+      case 'upcoming': return 'bg-blue-100 text-blue-800 border-blue-300';
       default: return 'bg-gray-100 text-gray-800 border-gray-300';
     }
   };

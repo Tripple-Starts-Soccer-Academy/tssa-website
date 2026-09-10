@@ -6,9 +6,11 @@ const TheClub = () => {
     founded: '2016',
     president: 'NTAMBI ROGERS TABULA',
     manager: 'JOSH CHERMBERLINE',
-    stadium: 'TSSA National Stadium',
-    colors: ['Blue', 'White', 'Gold'],
-    league: 'Premier Division',
+    stadium: 'Good Shepherd High School, Nansana',
+    nickname: 'The Elephants of Mabira',
+    location: 'Nansana Ward 7/8, Ochengi Zone, Wakiso District, Uganda',
+    colors: ['Blue', 'Yellow', 'White'],
+    league: 'Community Leagues',
     website: 'TSSA.com',
   };
 
@@ -42,33 +44,28 @@ const TheClub = () => {
   const achievements = [
     {
       year: '2023',
-      achievement: 'National Championship Winners',
-      description: 'Secured our 8th league title in dramatic fashion',
+      achievement: 'NCOA League & Ganda League',
+      description: 'Competed and won in local community and league tournaments.',
     },
     {
       year: '2022',
-      achievement: 'Stadium Renovation Complete',
-      description: 'Completed $50 million stadium modernization project',
+      achievement: 'Kasule Tournament',
+      description: 'Division One Winners and relocation after Mabira Playground was destroyed.',
     },
     {
       year: '2021',
-      achievement: 'Academy of the Year',
-      description: 'Recognized for outstanding youth development program',
+      achievement: 'Nansana League',
+      description: 'League Tournament Winners.',
     },
     {
-      year: '2020',
-      achievement: 'Community Impact Award',
-      description: 'Honored for extensive community outreach initiatives',
+      year: '2019-2022',
+      achievement: 'Regional & Community Tournaments',
+      description: 'Active in Watoto Wasoka, Wakiso Academy Association League, Rangers Tournament and more.',
     },
     {
-      year: '2019',
-      achievement: 'Golden Generation',
-      description: 'Homegrown talent leads team to double-winning season',
-    },
-    {
-      year: '1975',
+      year: '2016',
       achievement: 'Club Foundation',
-      description: 'TSSA established with 12 founding members',
+      description: 'Established by Mr. Ntambi Rogers Tabula at Mabira Playground on Sunday 14th April 2016.',
     },
   ];
 
@@ -114,28 +111,22 @@ const TheClub = () => {
 
   const communityPrograms = [
     {
-      name: 'Youth Development',
-      description: 'Free football training for underprivileged children',
-      participants: '500+',
+      name: 'Sports Talent Development',
+      description: 'Football, netball and volleyball training for boys and girls from the slums.',
+      participants: '300+',
       impact: 'High',
     },
     {
-      name: 'Education Support',
-      description: 'Scholarships and tutoring for young athletes',
+      name: 'Vocational Skills Training',
+      description: 'Teaching soap making, book making and bakery to help children earn a living.',
+      participants: '150+',
+      impact: 'High',
+    },
+    {
+      name: 'Slum Children Support',
+      description: 'Supporting vulnerable children with mentorship, life skills and safe spaces to learn and play.',
       participants: '200+',
-      impact: 'Medium',
-    },
-    {
-      name: 'Health & Wellness',
-      description: 'Community fitness programs and health screenings',
-      participants: '1000+',
       impact: 'High',
-    },
-    {
-      name: 'Environmental Initiative',
-      description: 'Sustainability programs and green stadium initiatives',
-      participants: 'All fans',
-      impact: 'Medium',
     },
   ];
 
@@ -192,6 +183,14 @@ const TheClub = () => {
                 <div className="text-gray-600">{clubInfo.stadium}</div>
               </div>
             </div>
+            <div>
+              <div className="font-semibold text-gray-900">Nickname</div>
+              <div className="text-gray-600">{clubInfo.nickname}</div>
+            </div>
+            <div>
+              <div className="font-semibold text-gray-900">Location</div>
+              <div className="text-gray-600">{clubInfo.location}</div>
+            </div>
           </div>
 
           <div className="mt-6 pt-6 border-t border-gray-200">
@@ -235,6 +234,17 @@ const TheClub = () => {
             <History className="w-6 h-6 mr-2 text-blue-600" />
             Club History & Achievements
           </h3>
+          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Triple Stars Soccer Academy, nicknamed <strong>The Elephants of Mabira</strong>, is a non-government organization based on developing talents and supporting both the boy child and the girl child through talent development and teaching them different skills that can help them make a difference in their lives.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              The academy teaches kids soap making, book making, bakery, netball, football, volleyball and more, helping slum children change their lives. It was formed by <strong>Mr. Ntambi Rogers Tabula</strong> and established on <strong>Sunday 14th April 2016</strong>. It started at Mabira Playground, a green grass field surrounded by trees that attracted elephants to graze peacefully while people played, inspiring the nickname. Mabira Playground was destroyed in July 2022 and no longer exists.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              The academy now uses <strong>Good Shepherd High School, Nansana</strong> (near the cheapest supermarket) and is located in <strong>Nansana Ward 7/8, Ochengi Zone, Wakiso District, Uganda, Africa</strong>.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {achievements.map((achievement, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">

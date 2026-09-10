@@ -11,8 +11,11 @@ import NewsReels from './components/NewsReels';
 import YouTubeChannel from './components/YouTubeChannel';
 import YearlySchedule from './components/YearlySchedule';
 import Stadium from './components/Stadium';
+import TassaPortal from './components/TassaPortal';
 
 function App() {
+  const [tassaOpen, setTassaOpen] = React.useState(false);
+
   return (
     <div className="App">
       <Navbar />
@@ -34,7 +37,7 @@ function App() {
             <div>
               <h3 className="text-2xl font-bold text-yellow-400 mb-4">TSSA</h3>
               <p className="text-gray-400">
-                More than a football club - A community united by passion since 1975.
+                Triple Stars Soccer Academy - The Elephants of Mabira. Developing talent and supporting the boy child and girl child since 2016.
               </p>
             </div>
             <div>
@@ -42,17 +45,19 @@ function App() {
               <ul className="space-y-2 text-gray-400">
                 <li><a href="#club" className="hover:text-white">The Club</a></li>
                 <li><a href="#matches" className="hover:text-white">Matches</a></li>
+                <li><a href="#trophies" className="hover:text-white">Trophies</a></li>
+                <li><a href="#gallery" className="hover:text-white">Gallery</a></li>
                 <li><a href="#store" className="hover:text-white">Store</a></li>
-                <li><a href="#tickets" className="hover:text-white">Tickets</a></li>
+                <li><a href="#schedule" className="hover:text-white">Schedule</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>123 Stadium Drive</li>
-                <li>Sports City, SC 12345</li>
-                <li>+1 (555) 123-4567</li>
-                <li>info@tsya.com</li>
+                <li>Good Shepherd High School, Nansana</li>
+                <li>Nansana Ward 7/8, Ochengi Zone</li>
+                <li>Wakiso District, Uganda</li>
+                <li>info@tssa.com</li>
               </ul>
             </div>
             <div>
@@ -66,10 +71,18 @@ function App() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-            <p>&copy; 2024 TSSA Football Club. All rights reserved.</p>
+            <button
+              onClick={() => setTassaOpen(true)}
+              className="bg-yellow-400 text-gray-900 font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition-colors mb-4"
+            >
+              TASSA
+            </button>
+            <p>&copy; 2026 Triple Stars Soccer Academy - The Elephants of Mabira. All rights reserved.</p>
           </div>
         </div>
       </footer>
+
+      <TassaPortal open={tassaOpen} onClose={() => setTassaOpen(false)} />
     </div>
   );
 }

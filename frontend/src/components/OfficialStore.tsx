@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ShoppingCart, Heart, Star, Filter, Search, Plus, Minus, X } from 'lucide-react';
+import { getProductImage, getAwayJerseyImage } from '../utils/productImages';
 
 const OfficialStore = () => {
   const [cart, setCart] = useState<Array<{id: number, quantity: number}>>([]);
@@ -13,7 +14,7 @@ const OfficialStore = () => {
       name: 'Home Jersey 2024',
       price: 89.99,
       category: 'Jerseys',
-      image: 'https://images.unsplash.com/photo-1556228578-1d83b39fbb04?w=400&h=400&fit=crop',
+      image: '/shopping/IMG_0272.jpg',
       rating: 4.8,
       reviews: 234,
       sizes: ['S', 'M', 'L', 'XL', 'XXL'],
@@ -24,7 +25,7 @@ const OfficialStore = () => {
       name: 'Away Jersey 2024',
       price: 89.99,
       category: 'Jerseys',
-      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop',
+      image: getAwayJerseyImage(),
       rating: 4.7,
       reviews: 189,
       sizes: ['S', 'M', 'L', 'XL', 'XXL'],
@@ -35,7 +36,7 @@ const OfficialStore = () => {
       name: 'Training Kit',
       price: 59.99,
       category: 'Training',
-      image: 'https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=400&fit=crop',
+      image: getProductImage('training'),
       rating: 4.6,
       reviews: 156,
       sizes: ['S', 'M', 'L', 'XL'],
@@ -46,7 +47,7 @@ const OfficialStore = () => {
       name: 'Scarf - Official',
       price: 24.99,
       category: 'Accessories',
-      image: 'https://images.unsplash.com/photo-1578632292335-df3abbb0d586?w=400&h=400&fit=crop',
+      image: getProductImage('scarf'),
       rating: 4.9,
       reviews: 412,
       sizes: ['One Size'],
@@ -57,7 +58,7 @@ const OfficialStore = () => {
       name: 'Cap - Team Logo',
       price: 19.99,
       category: 'Accessories',
-      image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop',
+      image: getProductImage('cap'),
       rating: 4.5,
       reviews: 98,
       sizes: ['One Size'],
@@ -68,7 +69,7 @@ const OfficialStore = () => {
       name: 'Football - Home',
       price: 34.99,
       category: 'Equipment',
-      image: 'https://images.unsplash.com/photo-1614632537193-23e1a0bcd36a?w=400&h=400&fit=crop',
+      image: getProductImage('football'),
       rating: 4.7,
       reviews: 167,
       sizes: ['Standard'],
@@ -79,7 +80,7 @@ const OfficialStore = () => {
       name: 'Jacket - Winter',
       price: 119.99,
       category: 'Outerwear',
-      image: 'https://images.unsplash.com/photo-1551698618-1d585048d6ba?w=400&h=400&fit=crop',
+      image: getProductImage('jacket'),
       rating: 4.8,
       reviews: 89,
       sizes: ['S', 'M', 'L', 'XL', 'XXL'],
@@ -90,7 +91,7 @@ const OfficialStore = () => {
       name: 'Water Bottle',
       price: 14.99,
       category: 'Accessories',
-      image: 'https://images.unsplash.com/photo-1602143407151-7111842fa633?w=400&h=400&fit=crop',
+      image: getProductImage('bottle'),
       rating: 4.4,
       reviews: 234,
       sizes: ['750ml'],
